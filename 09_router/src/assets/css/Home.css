@@ -1,0 +1,39 @@
+.Home {
+	margin: 50px 150px;
+}
+
+.Home__hero__main {
+	display: flex;
+	justify-content: center;
+	gap: 3rem
+}
+
+.Home__hero__main__text {
+	align-self: flex-end;
+	color: rgb(37, 37, 37);
+	font-size: 9rem;
+}
+
+.Home__hero__main__img {
+	border: 5px solid rgb(37, 37, 37);
+	height: 700px;
+	width: 700px;
+	box-shadow: 10px 10px 0 0 rgb(37, 37, 37);
+}
+
+.Home__hero__footer {
+	display: flex;
+	justify-content: center;
+	padding-top: 6rem;
+	gap: 3rem;
+}
+
+.fa-brands {
+	color: rgb(37, 37, 37);
+	transition: all 0.2s ease-in-out;
+}
+
+.fa-brands:hover {
+	color: rgb(96, 241, 255);
+	transition: all 0.2s ease-in-out;
+}

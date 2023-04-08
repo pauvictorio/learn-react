@@ -1,0 +1,27 @@
+.App {
+	margin: 0 150px;
+}
+
+.App__list {
+	display: flex;
+	list-style: none;
+	border-bottom: 1px solid rgb(37, 37, 37);
+}
+
+.App__list__item {
+	font-size: 1.2rem;
+	height: 100%;
+	padding: 20px 0;
+}
+
+.App__list__item a {
+	color: rgb(37, 37, 37);
+	text-decoration: none;
+	padding: 20px 50px;
+	transition: all 0.2s ease-in-out;
+}
+
+.App__list__item a:hover {
+	color: rgb(96, 241, 255);
+	transition: all 0.2s ease-in-out;
+}

@@ -1,0 +1,58 @@
+.ContactList {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 5px;
+	margin: 2rem;
+	box-shadow: 3px 3px 3px 0 rgba(150, 150, 150, 0.2);
+}
+
+	.ContactList__header {
+		color: rgb(150, 150, 150);
+		font-size: 1rem;
+		font-weight: bold;
+		padding: 1.5rem 1rem;
+	}
+
+	.ContactList__list {
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+	}
+
+		.ContactList__list__item {
+			display: flex;
+			flex-direction: row;
+			border-top: 2px solid rgb(244, 248, 255);
+			padding: 1rem;
+			gap: 0.5rem;
+		}
+
+			.ContactList__list__item__avatar {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: rgb(130, 51, 255);
+				color: white;
+				font-size: 1.5rem;
+				border-radius: 50%;
+				width: 50px;
+				height: 50px;
+			}
+
+			.ContactList__list__item__contact {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 0.3rem;
+			}
+
+				.ContactList__list__item__contact__name {
+					font-size: 1.3rem;
+					font-weight: bold;
+				}
+
+				.ContactList__list__item__contact__email {
+					text-decoration: underline;
+					color: rgb(35, 120, 243);
+				}

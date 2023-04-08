@@ -1,0 +1,23 @@
+.Gallery {
+	display: flex;
+	flex-direction: column;
+	margin: 50px 150px;
+}
+
+.Gallery__group {
+	padding: 2rem;
+}
+
+.Gallery__group__images {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.Gallery__group__images img {
+	height: 500px;
+	width: auto;
+	border: 2px solid rgb(37, 37, 37);
+	box-shadow: 8px 8px 0 0 rgb(37, 37, 37);
+	margin: 2rem;
+}

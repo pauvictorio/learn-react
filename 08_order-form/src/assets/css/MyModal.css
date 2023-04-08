@@ -1,0 +1,17 @@
+.MyModal__ModalBody {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.MyModal__ModalBody div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.MyModal__Total {
+	font-size: 1.5rem;
+	font-weight: 600;
+}

@@ -1,0 +1,22 @@
+.AboutMe {
+	display: flex;
+	margin: 50px 150px;
+	gap: 3rem;
+}
+
+.AboutMe__img {
+	border: 2px solid rgb(37, 37, 37);
+	height: 150px;
+	width: 150px;
+}
+
+.AboutMe__details {
+	height: 80vh;
+	width: 100%;
+	border-left: 1px solid rgb(37, 37, 37);
+}
+
+.AboutMe__details__text {
+	font-size: 1.5rem;
+	padding: 0 3rem;
+}

@@ -1,0 +1,65 @@
+.Poll,
+.Poll__form,
+.Poll__form__group,
+.Poll__form__group__options__option {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Poll {
+	padding: 2rem 0;
+}
+
+.Poll__title {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+.Poll__form__group {
+	margin-bottom: 3rem;
+}
+
+.Poll__form__group__title {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+.Poll__form__group__options {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 2rem;
+}
+
+.Poll__form__group__options__option {
+	display: flex;
+	align-items: center;
+}
+
+.Poll__form__group__options__option img {
+	border: 3px solid black;
+	height: 250px;
+	width: 250px;
+	cursor: pointer;
+	box-shadow: 4px 4px 0 0 black;
+}
+
+.active {
+	border: 3px solid #ff5252 !important;
+	box-shadow: 4px 4px 0 0 #ff5252 !important;
+}
+
+.Poll__form__submitBtn {
+	background-color: #ff5252;
+	color: white;
+	font-size: 0.8rem;
+	border: 1.5px solid black;
+	padding: 0.2rem 0.5rem;
+	cursor: pointer;
+	box-shadow: 2px 2px 0 0 black;
+}
+
+.Poll__form__submitBtn:hover {
+	background-color: #923333;
+}

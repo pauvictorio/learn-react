@@ -1,0 +1,18 @@
+.Footer__container {
+	background-color: black;
+	height: 12rem;
+}
+
+.Footer__container__name {
+	color: white;
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+.Footer__container__name:hover {
+	color: white
+}
+
+.socials .fa-brands {
+	color: white;
+}

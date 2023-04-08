@@ -1,0 +1,43 @@
+.Register {
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(244, 248, 255);
+	padding: 2rem;
+}
+
+.Register__header {
+	margin-bottom: 1.5rem;
+}
+
+	.Register__form__group {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 1rem;
+	}
+	
+		.Register__form__group label {
+			font-size: 1rem;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+
+		.Register__form__group input {
+			font-size: 1.2rem;
+			padding: 2px 5px 3px;
+			width: 20rem;
+		}
+	
+	.Register__form button {
+		background-color: rgb(170, 170, 170);
+		color: white;
+		font-size: 1rem;
+		border: 0;
+		border-radius: 5px;
+		padding: 10px 15px;
+	}
+
+	.Register__form button:hover {
+		background-color: rgb(150, 150, 150);
+		cursor: pointer;
+	}

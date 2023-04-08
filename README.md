@@ -1,2 +1,3 @@
-# learn-react
-A repo consisting of apps I made when learning React
+# React Apps
+
+This repository contains a collection of apps that I built while learning React with HackerHero.

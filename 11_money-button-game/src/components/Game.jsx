@@ -1,39 +1,31 @@
-import React from 'react'
-import '../assets/css/Game.css'
+import React from 'react';
+import '../assets/css/Game.css';
 
-export default function Game() {
+export default function Game({ balance, chance, gameInfo, onBetClick }) {
+	const handleBet = (e) => {
+		onBetClick(e);
+	}
+
 	return (
 		<div className="Game">
 			<div className="Game__userInfo">
-				<h1 className="Game__userInfo__balance">Your Money: 500</h1>
-				<h1 className="Game__userInfo__chance">Chance/s left: 10</h1>
+				<h1 className="Game__userInfo__balance">Your Money: {balance}</h1>
+				<h1 className="Game__userInfo__chance">Chance/s left: {chance}</h1>
 			</div>
 
 			<div className="Game__buttonsContainer">
-				<div className="Game__buttonsContainer__buttonGroup">
-					<h3>Low Risk</h3>
-					<button>Bet</button>
-					<p>-25 to 100</p>
-				</div>
-
-				<div className="Game__buttonsContainer__buttonGroup">
-					<h3>Moderate Risk</h3>
-					<button>Bet</button>
-					<p>-100 to 1000</p>
-				</div>
-
-				<div className="Game__buttonsContainer__buttonGroup">
-					<h3>High Risk</h3>
-					<button>Bet</button>
-					<p>-500 to 2500</p>
-				</div>
-
-				<div className="Game__buttonsContainer__buttonGroup">
-					<h3>Severe Risk</h3>
-					<button>Bet</button>
-					<p>-3000 to 5000</p>
-				</div>
+				{
+					Object.keys(gameInfo).map((game) => {
+						return (
+							<div className="Game__buttonsContainer__buttonGroup" key={game}>
+								<h3>{gameInfo[game].name}</h3>
+								<button id={gameInfo[game].id} onClick={handleBet}>Bet</button>
+								<p>{gameInfo[game].min} to {gameInfo[game].max}</p>
+							</div>
+						)
+					})
+				}
 			</div>
 		</div>
-	)
+	);
 }

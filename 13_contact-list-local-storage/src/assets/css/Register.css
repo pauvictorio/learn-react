@@ -1,0 +1,69 @@
+.Register {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3rem;
+	gap: 2rem;
+}
+
+.Register__title {
+	font-size: 2rem;
+	font-weight: normal;
+}
+
+.Register__form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+
+.Register__form__group {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	gap: 1rem;
+}
+
+.Register__form__group label {
+	font-size: 1.5rem;
+}
+
+.Register__form__group input {
+	text-align: center;
+	font-size: 1.5rem;
+	padding: 0.5rem;
+	border: none;
+	border-bottom: 1px solid #ccc;
+}
+
+.Register__form__group input:focus {
+	outline: none;
+	border-bottom: 1px solid #000;
+}
+
+.Register__form__group input[type="number"]::-webkit-inner-spin-button,
+.Register__form__group input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.Register__form__submit {
+	background-color: white;
+	color: black;
+	font-size: 1.2rem;
+	width: 100%;
+	border: 2px solid black;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out;
+
+}
+
+.Register__form__submit:hover {
+	background-color: black;
+	color: white;
+	transition: all 0.1s ease-in-out;
+}

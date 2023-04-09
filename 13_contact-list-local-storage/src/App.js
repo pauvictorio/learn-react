@@ -1,8 +1,8 @@
 import React from 'react'
-import Welcome from './components/Welcome'
+import Register from './components/Register'
 
 export default function App() {
 	return (
-		<Welcome />
+		<Register />
 	)
 }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './assets/css/App.css';
 import Game from './components/Game';
-import MessageBoard from './components/MessageBoard';
 
 export default function App() {
 	const [balance, setBalance] = useState(500);
@@ -41,13 +40,14 @@ export default function App() {
 	const handleBet = (e) => {
 		const risk = e.target.id;
 		const bet = randomizeBet(gameInfo[risk].min, gameInfo[risk].max);
-		console.log(bet);
+
+		if (chance > 0) {
+			setChance(chance - 1);
+			setBalance(balance + bet);
+		}
 	}
 
 	return (
-		<>
-			<Game balance={balance} chance={chance} gameInfo={gameInfo} onBetClick={handleBet} />
-			<MessageBoard />
-		</>
+		<Game balance={balance} chance={chance} gameInfo={gameInfo} onBetClick={handleBet} />
 	)
 }

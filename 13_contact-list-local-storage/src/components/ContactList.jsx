@@ -14,7 +14,7 @@ export default function ContactList({ contacts, onDelete }) {
 					<ul className="ContactList__list" key={index}>
 						<li className="ContactList__list__group">
 							<h2>{contact.name}</h2>
-							<p>{contact.contact}</p>
+							<p>{contact.number}</p>
 							<button onClick={() => handleDelete(index)}>Delete</button>
 						</li>
 					</ul>

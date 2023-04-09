@@ -9,9 +9,7 @@ export default function Register() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const name = e.target.name.value;
-		const contact = e.target.contact.value;
-		setContacts(prevContacts => [...prevContacts, { name, contact }]);
+		setContacts(prevContacts => [...prevContacts, { name, number }]);
 		e.target.reset();
 	}
 

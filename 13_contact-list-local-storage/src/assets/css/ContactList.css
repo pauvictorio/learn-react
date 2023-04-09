@@ -1,0 +1,38 @@
+.ContactList {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3rem;
+	gap: 2rem;
+}
+
+.ContactList__title {
+	font-size: 2rem;
+	font-weight: normal;
+}
+
+.ContactList__list {
+	display: flex;
+	flex-direction: column;
+	width: 550px;
+	gap: 1rem;
+}
+
+.ContactList__list__group {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid black;
+	padding: 1rem 2rem;
+	padding-top: 0;
+}
+
+.ContactList__list__group h2 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.ContactList__list__group p {
+	font-size: 2rem;
+	font-weight: normal;
+}

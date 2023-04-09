@@ -1,8 +1,8 @@
 import React from 'react'
-import Welcome from './components/Welcome'
+import Pet from './components/Pet'
 
 export default function App() {
 	return (
-		<Welcome />
+		<Pet />
 	)
 }

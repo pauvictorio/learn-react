@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../assets/css/Game.css';
 import MessageBoard from './MessageBoard';
 
@@ -14,7 +14,46 @@ function renderGame(gameInfo, handleBet) {
 	})
 }
 
-export default function Game({ balance, chance, gameInfo, onBetClick }) {
+function getDateTime() {
+	const now = new Date();
+	const month = now.getMonth() + 1;
+	const day = now.getDate();
+	const year = now.getFullYear();
+	const hours = now.getHours() % 12 || 12;
+	const minutes = now.getMinutes().toString().padStart(2, '0');
+	const ampm = now.getHours() >= 12 ? 'PM' : 'AM';
+
+	const formattedDateTime = `${month}-${day}-${year} ${hours}:${minutes} ${ampm}`;
+
+	return formattedDateTime;
+}
+
+export default function Game({ balance, chance, bet, risk, gameInfo, onBetClick }) {
+	const [messages, setMessages] = useState([
+		{
+			message: `${getDateTime()} | Welcome to the Money Button Game!`,
+			bet: ''
+		}
+	]
+	);
+
+	useEffect(() => {
+		if (bet) {
+			if (chance >= 0) {
+				setMessages(prevMessages => [...prevMessages, {
+					message: `${getDateTime()} | You clicked "${risk}", value is ${bet}. Current balance is ${balance} with ${chance} chance/s left.`,
+					bet: bet
+				}]);
+			}
+			if (chance === 0) {
+				setMessages(prevMessages => [...prevMessages, {
+					message: `GAME OVER!!!`,
+					bet: 'done'
+				}]);
+			}
+		}
+	}, [chance]);
+
 	const handleBet = (e) => {
 		onBetClick(e);
 	}
@@ -32,7 +71,7 @@ export default function Game({ balance, chance, gameInfo, onBetClick }) {
 				</div>
 			</div>
 
-			<MessageBoard balance={balance} chance={chance} />
+			<MessageBoard messages={messages} bet={bet} />
 		</>
 	);
 }

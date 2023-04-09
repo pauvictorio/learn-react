@@ -1,8 +1,9 @@
-import React from 'react'
-import Welcome from './components/Welcome'
+import React, { useState, useEffect } from 'react'
+import './assets/css/App.css'
+import Game from './components/Game'
 
 export default function App() {
 	return (
-		<Welcome />
+		<Game />
 	)
 }

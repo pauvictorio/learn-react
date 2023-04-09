@@ -1,0 +1,60 @@
+.Game {
+	display: flex;
+	flex-direction: column;
+	width: 997px;
+	padding: 2rem 0;
+	gap: 2rem;
+}
+
+.Game__userInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.Game__userInfo__balance {
+	font-size: 1.8rem;
+}
+
+.Game__userInfo__chance {
+	font-size: 1.8rem;
+	font-weight: normal;
+}
+
+.Game__buttonsContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.Game__buttonsContainer__buttonGroup {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 20%;
+	height: 200px;
+	border: 2px solid black;
+}
+
+.Game__buttonsContainer__buttonGroup h3 {
+	color: rgb(46, 136, 233);
+	font-size: 1.5rem;
+}
+
+.Game__buttonsContainer__buttonGroup button {
+	background-color: rgb(0, 158, 15);
+	color: white;
+	font-size: 1.2rem;
+	border: 2px solid black;
+	padding: 8px 30px;
+	cursor: pointer;
+	box-shadow: 3px 3px 0 0 black;
+}
+
+.Game__buttonsContainer__buttonGroup button:hover {
+	background-color: rgb(0, 128, 0);
+}
+
+.Game__buttonsContainer__buttonGroup p {
+	font-size: 1.2rem;
+}

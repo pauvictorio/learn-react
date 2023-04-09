@@ -3,6 +3,8 @@ import '../assets/css/Register.css'
 import ContactList from './ContactList'
 
 export default function Register() {
+	const [name, setName] = useState('');
+	const [number, setNumber] = useState('');
 	const [contacts, setContacts] = useState(JSON.parse(localStorage.getItem('CONTACTS')) || []);
 
 	const handleSubmit = (e) => {
@@ -17,6 +19,16 @@ export default function Register() {
 		localStorage.setItem('CONTACTS', JSON.stringify(contacts));
 	}, [contacts]);
 
+	const handleDelete = (index) => {
+		setContacts(prevContacts => prevContacts.filter((contact, i) => i !== index));
+	}
+
+	const disableSubmit = () => {
+		if (name === '' || number === '') {
+			return true;
+		}
+		return false
+	}
 
 	return (
 		<>
@@ -25,17 +37,32 @@ export default function Register() {
 				<form className="Register__form" onSubmit={handleSubmit}>
 					<div className="Register__form__group">
 						<label htmlFor="name">Name</label>
-						<input type="text" name="name" id="name" autoComplete="off" />
+						<input
+							type="text"
+							name="name"
+							id="name"
+							value={name}
+							onChange={(e) => setName(e.target.value)}
+							autoComplete="off"
+						/>
+
 					</div>
 					<div className="Register__form__group">
 						<label htmlFor="contact">Contact Number</label>
-						<input type="number" name="contact" id="contact" autoComplete="off" />
+						<input
+							type="number"
+							name="contact"
+							id="contact"
+							value={number}
+							onChange={(e) => setNumber(e.target.value)}
+							autoComplete="off"
+						/>
 					</div>
-					<button className="Register__form__submit">Add</button>
+					<button className="Register__form__submit" disabled={disableSubmit()}>Add</button>
 				</form>
 			</div>
 
-			<ContactList contacts={contacts} />
+			<ContactList contacts={contacts} onDelete={handleDelete} />
 		</>
 	)
 }

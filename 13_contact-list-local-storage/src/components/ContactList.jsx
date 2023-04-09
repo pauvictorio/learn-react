@@ -1,7 +1,11 @@
 import React from 'react'
 import '../assets/css/ContactList.css'
 
-export default function ContactList({ contacts }) {
+export default function ContactList({ contacts, onDelete }) {
+	const handleDelete = (index) => {
+		onDelete(index);
+	}
+
 	return (
 		<div className="ContactList">
 			<h1 className="ContactList__title">Contact List</h1>
@@ -11,6 +15,7 @@ export default function ContactList({ contacts }) {
 						<li className="ContactList__list__group">
 							<h2>{contact.name}</h2>
 							<p>{contact.contact}</p>
+							<button onClick={() => handleDelete(index)}>Delete</button>
 						</li>
 					</ul>
 				))

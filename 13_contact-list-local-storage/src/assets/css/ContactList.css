@@ -36,3 +36,19 @@
 	font-size: 2rem;
 	font-weight: normal;
 }
+
+.ContactList__list__group button {
+	background-color: rgba(232, 32, 32, 0.8);
+	color: white;
+	font-size: 1rem;
+	border: 0;
+	border-radius: 0.5rem;
+	padding: 5px;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out;
+}
+
+.ContactList__list__group button:hover {
+	background-color: rgba(203, 73, 73, 1);
+	transition: all 0.1s ease-in-out;
+}

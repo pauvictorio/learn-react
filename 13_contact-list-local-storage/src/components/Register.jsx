@@ -10,7 +10,8 @@ export default function Register() {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setContacts(prevContacts => [...prevContacts, { name, number }]);
-		e.target.reset();
+		setName('');
+		setNumber('');
 	}
 
 	useEffect(() => {

@@ -9,17 +9,17 @@ export default function ContactList({ contacts, onDelete }) {
 	return (
 		<div className="ContactList">
 			<h1 className="ContactList__title">Contact List</h1>
-			{
-				contacts.map((contact, index) => (
-					<ul className="ContactList__list" key={index}>
-						<li className="ContactList__list__group">
+			<ul className="ContactList__list" >
+				{
+					contacts.map((contact, index) => (
+						<li className="ContactList__list__group" key={index}>
 							<h2>{contact.name}</h2>
 							<p>{contact.number}</p>
 							<button onClick={() => handleDelete(index)}>Delete</button>
 						</li>
-					</ul>
-				))
-			}
+					))
+				}
+			</ul>
 		</div>
 	)
 }

@@ -1,0 +1,17 @@
+.ImageList {
+	background: linear-gradient(to bottom, white, black);
+	columns: 20rem;
+	padding: 1rem;
+}
+
+.ImageList__item {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+.ImageList__item img {
+	width: 300px;
+	border: 0;
+	border-radius: 10px;
+}

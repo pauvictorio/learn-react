@@ -1,3 +1,63 @@
 body {
-	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: black;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	padding: 2rem;
+}
+
+.App__search {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.App__search__form {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.App__search__form input {
+	padding: 0.5rem;
+	border: 0;
+	border-bottom: 1px solid rgb(189, 189, 189);
+	transition: all 0.1s ease-in-out;
+}
+
+.App__search__form input:focus {
+	outline: none;
+	border-bottom: 1px solid black;
+	transition: all 0.1s ease-in-out;
+}
+
+.App__search__form button {
+	background-color:  white;
+	color: black;
+	font-size: 1rem;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px 20px;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out;
+}
+
+.App__search__form button:hover {
+	background-color: black;
+	color: white;
+	transition: all 0.1s ease-in-out;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgb(202, 202, 202);
+	padding: 1rem;
 }

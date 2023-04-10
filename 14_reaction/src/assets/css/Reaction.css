@@ -1,0 +1,33 @@
+.Reaction {
+	display: flex;
+	margin-top: 2rem;
+	gap: 2rem;
+}
+
+.Reaction__group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.Reaction__group p {
+	font-size: 1.5rem;
+}
+
+.Reaction__group img {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out;
+}
+
+.Reaction__group img:hover {
+	transform: scale(1.1) rotate(36deg) rotate(-45deg);
+	transition: all 0.1s ease-in-out;
+}
+
+.Reaction__group img:active {
+	transform: scale(1.2) rotate(-36deg) rotate(45deg);
+	transition: all 0.1s ease-in-out;
+}

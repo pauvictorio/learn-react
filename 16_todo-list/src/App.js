@@ -2,26 +2,12 @@ import React, { useState } from 'react'
 import './assets/css/App.css'
 import NoteList from './components/NoteList'
 
-const todosList = [
-	{
-		id: 1,
-		title: 'Task #1',
-		description: 'Description of task #1',
-		status: 'pending'
-	},
-	{
-		id: 2,
-		title: 'Task #2',
-		description: 'Description of task #2',
-		status: 'pending'
-	},
-	{
-		id: 3,
-		title: 'Task #3',
-		description: 'Description of task #3',
-		status: 'pending'
-	}
-]
+const todosList = [1, 2, 3].map((id) => ({
+	id: id,
+	title: `Task #${id}`,
+	description: `Description of task #${id}`,
+	status: 'pending'
+  }));
 
 export default function App() {
 	const [todos, setTodos] = useState(todosList);

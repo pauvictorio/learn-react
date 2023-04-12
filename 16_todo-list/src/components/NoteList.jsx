@@ -4,7 +4,6 @@ import '../assets/css/NoteList.css'
 export default function NoteList({ todos, onChangeStatus }) {
 	const handleChangeStatus = (e, id) => {
 		onChangeStatus(e, id);
-		// Remove the class from the previous status
 		const target = e.target.parentElement.parentElement.parentElement.parentElement.children[0];
 		target.classList.remove(target.classList[1]);
 		target.classList.add(e.target.value);
@@ -22,34 +21,19 @@ export default function NoteList({ todos, onChangeStatus }) {
 						<div className="NoteList__note__status">
 							<p>Marked task as:</p>
 							<form>
-								<label>
-									<input
-										type="radio"
-										name="status"
-										value="pending"
-										defaultChecked="checked"
-										onClick={(e) => handleChangeStatus(e, todo.id)}
-									/>
-									Pending
-								</label>
-								<label>
-									<input
-										type="radio"
-										name="status"
-										value="ongoing"
-										onClick={(e) => handleChangeStatus(e, todo.id)}
-									/>
-									Ongoing
-								</label>
-								<label>
-									<input
-										type="radio"
-										name="status"
-										value="completed"
-										onClick={(e) => handleChangeStatus(e, todo.id)}
-									/>
-									Completed
-								</label>
+							{
+								['pending', 'ongoing', 'completed'].map((status) => (
+									<label key={status}>
+										<input
+											type="radio"
+											name="status"
+											value={status}
+											onClick={(e) => handleChangeStatus(e, todo.id)}
+										/>
+										{status.charAt(0).toUpperCase() + status.slice(1)}
+									</label>
+								))
+							}
 							</form>
 						</div>
 					</div>

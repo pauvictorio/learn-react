@@ -1,0 +1,60 @@
+.NoteList {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.NoteList__note {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	border: 2px solid black;
+	padding: 1rem;
+	gap: 1rem;
+	box-shadow: 4px 4px 0 0 black;
+}
+
+.NoteList__note__title {
+	border: 2px solid black;
+	padding: 0.5rem;
+}
+
+.NoteList__note__title h2 {
+	color: rgb(255, 255, 255);
+	font-size: 1.2rem;
+}
+
+.NoteList__note__text {
+	padding: 0.5rem;
+}
+
+.NoteList__note__status {
+	display: flex;
+	flex-direction: column;
+	padding: 0.5rem;
+}
+
+.NoteList__note__status form {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding: 0.5rem;
+}
+
+.NoteList__note__status form label {
+	display: flex;
+	gap: 0.5rem;
+	cursor: pointer;
+}
+
+.pending {
+	background-color: rgb(244, 67, 54);
+}
+
+.ongoing {
+	background-color: rgb(33, 150, 243);
+}
+
+.completed {
+	background-color: rgb(76, 175, 80);
+}
